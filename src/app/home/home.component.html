@@ -1,3 +1,7 @@
-<p>
-  home works!
-</p>
+<ul>
+  <li *ngFor="let todo of totoList" (hover)="showActions = true" (leave)="showActions = false" (click)="finishTodo(todo)" [ngClass0]="{ 'done' : todo.done }">
+    {{ todo.title }}
+    <button *ngIf="showActions">Modifier</button>
+    <button *ngIf="showActions">Supprimer</button>
+  </li>
+</ul>
