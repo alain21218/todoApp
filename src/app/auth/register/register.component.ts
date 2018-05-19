@@ -29,11 +29,10 @@ export class RegisterComponent implements OnInit {
   }
 
   get email() {
-    return this.formGroup.get("email");
+    return this.formGroup.get('email');
   }  
 
   get pass() {
-    return this.formGroup.get("pass");
-  }  
-
+    return this.formGroup.get('pass');
+  } 
 }

@@ -21,15 +21,18 @@ export class LoginComponent implements OnInit {
   }
 
   connect() {
-
+    this.firebaseService.connect(this.email.value, this.pass.value).then(
+      done => { this.firebaseService.setConnected(done.user) },
+      error => { console.log(error) }
+    )
   }
 
   get email() {
-    return this.formGroup.get("email");
+    return this.formGroup.get('email');
   }  
 
   get pass() {
-    return this.formGroup.get("pass");
-  }  
+    return this.formGroup.get('pass');
+  }
 
 }
