@@ -5,10 +5,8 @@
     <a routerLink="/register" routerLinkActive="active">Créer un compte</a>
   </div>
   <div class="middle"></div>
-  <div>
+  <div *ngIf="authService.connected">
     <span>{{ authService.user.email }}</span>
     <button>Déconnecter</button>
   </div>
 </nav>
-
-<!-- *ngIf="authService.connected" -->
