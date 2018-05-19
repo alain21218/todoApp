@@ -1,5 +1,9 @@
-<form (submit)="submit()">
-  <input type="text" placeholder="Email">
-  <input type="password" placeholder="Mot de passe">
-  <button type="submit">Connexion</button>
-</form>
+<form [formGroup]="formGroup" (submit)="connect()">
+    <input type="text" placeholder="Email" formControlName="email">
+    <span class="hint" *ngIf="email.touched && email.invalid">Adresse email invalide</span>
+  
+    <input type="password" placeholder="Mot de passe" formControlName="pass">
+    <span class="hint" *ngIf="pass.touched && pass.invalid">Mot de passe invalide</span>
+  
+    <button type="submit" [disabled]="formGroup.invalid">Connexion</button>
+  </form>

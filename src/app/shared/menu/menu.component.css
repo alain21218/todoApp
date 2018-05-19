@@ -1,0 +1,52 @@
+:host {
+    display: block;
+    width: 100%;
+    background: #EEE;
+}
+
+a.active {
+    background: #CCC;
+    color: white;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #555;
+}
+
+nav a:hover {
+    background: #DDD;
+}
+
+.middle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    background: rgb(214, 65, 65);
+    display: block;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    height: 100%;
+    width: auto;
+    padding: 0 20px;
+    color: white;
+}
+
+button:hover {
+    background: rgb(207, 61, 61);
+}
+
+button:active {
+    background: rgb(201, 56, 56);
+}

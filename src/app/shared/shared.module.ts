@@ -1,7 +1,7 @@
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,15 +15,17 @@ import { FIREBASE_CONFIG } from '../../environments/firebase.config';
   imports: [
     CommonModule,
     RouterModule.forRoot(routes),
-    AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    AngularFireDatabaseModule, 
-    AngularFireAuthModule
+    AngularFireModule.initializeApp(FIREBASE_CONFIG)
   ],
   declarations: [
     MenuComponent
   ],
   exports: [ 
-    MenuComponent
+    MenuComponent,
+    ReactiveFormsModule,
+    FormsModule,
+    AngularFireDatabaseModule, 
+    AngularFireAuthModule
   ],
   providers: [
     FirebaseService

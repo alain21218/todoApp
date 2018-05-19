@@ -7,9 +7,6 @@ import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { routes } from '../environments/route.config';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-
-
 
 @NgModule({
   declarations: [
@@ -20,8 +17,7 @@ import { FormsModule } from '@angular/forms';
     AuthModule,
     HomeModule,
     SharedModule,
-    RouterModule.forRoot(routes),
-    FormsModule
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

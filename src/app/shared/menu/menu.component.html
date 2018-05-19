@@ -1,5 +1,14 @@
 <nav>
-  <button routerLink="/home">Home</button>
-  <button routerLink="/login">Login</button>
-  <button routerLink="/register">Register</button>
+  <div>
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/login" routerLinkActive="active">Connexion</a>
+    <a routerLink="/register" routerLinkActive="active">Créer un compte</a>
+  </div>
+  <div class="middle"></div>
+  <div>
+    <span>{{ authService.user.email }}</span>
+    <button>Déconnecter</button>
+  </div>
 </nav>
+
+<!-- *ngIf="authService.connected" -->
