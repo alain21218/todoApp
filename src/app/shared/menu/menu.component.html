@@ -5,8 +5,8 @@
     <a routerLink="/register" routerLinkActive="active">Créer un compte</a>
   </div>
   <div class="middle"></div>
-  <div *ngIf="firebaseService.connected">
+  <div class="right" *ngIf="firebaseService.connected">
     <span>{{ firebaseService.user.email }}</span>
-    <button>Déconnecter</button>
+    <button (click)="firebaseService.logout()">Déconnecter</button>
   </div>
 </nav>

@@ -9,7 +9,7 @@ import { FirebaseService } from '../firebase.service';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private firebaseService: FirebaseService) { }
+  constructor(public firebaseService: FirebaseService) { }
 
   ngOnInit() {
   }

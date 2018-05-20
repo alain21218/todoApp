@@ -51,3 +51,11 @@ button:hover {
 button:active {
     background: rgb(201, 56, 56);
 }
+
+.right {
+    display: inherit;
+}
+
+.right > span {
+    margin-right: 10px;
+}

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../../shared/firebase.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LOCAL_STORAGE } from '../../shared/enum';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +23,10 @@ export class LoginComponent implements OnInit {
 
   connect() {
     this.firebaseService.connect(this.email.value, this.pass.value).then(
-      done => { this.firebaseService.setConnected(done.user) },
+      done => { 
+        this.firebaseService.setConnected(done.user);
+        localStorage.setItem(LOCAL_STORAGE.USER, JSON.stringify(done.user));
+      },
       error => { console.log(error) }
     )
   }
