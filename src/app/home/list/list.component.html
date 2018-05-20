@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let todo of todoList" (click)="finishTodo(todo)" [ngClass]="{ 'done' : todo.done }">
+    {{ todo.title }}
+  </li>
+</ul>
